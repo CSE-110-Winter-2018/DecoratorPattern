@@ -1,4 +1,5 @@
 // Design followed from http://www.newthinktank.com/2012/09/decorator-design-pattern-tutorial/
+// We will add decorators to plain toy car and convert it into a sports toy car
 public class ToyCarMaker {
 	
 	public static void main(String[] args) {

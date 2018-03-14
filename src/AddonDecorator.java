@@ -2,6 +2,11 @@
 public class AddonDecorator implements ToyCar{
 	
 	protected ToyCar tempToyCar;
+	protected double cost = 0.0;
+	protected String description = "";
+	protected double addonCost;
+	protected String addonDesc;
+	
 	
 	public AddonDecorator(ToyCar newToyCar){
 		
@@ -9,16 +14,25 @@ public class AddonDecorator implements ToyCar{
 		
 	}
 	
-	public String getDescription() {
+	public String getDescription(){
 		
-		return this.tempToyCar.getDescription();
+		return description;
 		
 	}
-
-	public double getCost() {
+	
+	public double getCost(){
 		
-		return this.tempToyCar.getCost();
+		System.out.println("Cost of " + description + ": " + cost);
 		
+		return cost;
+		
+	}
+	
+	public void init() {
+		System.out.println("Adding " + addonDesc);
+		
+		cost = tempToyCar.getCost() + addonCost;
+		description = tempToyCar.getDescription() + ", " + addonDesc;
 	}
 
 }

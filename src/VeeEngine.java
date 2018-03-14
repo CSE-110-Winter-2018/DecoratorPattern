@@ -2,22 +2,15 @@
 public class VeeEngine extends AddonDecorator{
 	
 	public VeeEngine(ToyCar newToyCar) {
+		
+		// Build the base
 		super(newToyCar);
 		
-		System.out.println("Adding VeeEngine");
-	}
-
-	public String getDescription(){
+		// Define new features
+		addonDesc = "VeeEngine";
+		addonCost = 0.35;
 		
-		return tempToyCar.getDescription() + ", VeeEngine";
-		
-	}
-	
-	public double getCost(){
-		
-		System.out.println("Cost of VeeEngine: " + .35);
-		
-		return tempToyCar.getCost() + .35;
-		
+		// Add them to base
+		init();
 	}
 }

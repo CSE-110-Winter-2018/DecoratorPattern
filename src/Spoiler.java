@@ -3,25 +3,16 @@ public class Spoiler extends AddonDecorator{
 	
 	public Spoiler(ToyCar newToyCar) {
 		
+		// Build the base
 		super(newToyCar);
 		
-		System.out.println("Adding Chassis");
+		// Define new features
+		addonDesc = "Spoiler"; 
+		addonCost = 0.50;
 		
-		System.out.println("Adding Spoiler");
-	}
-	
-	public String getDescription(){
-		
-		return tempToyCar.getDescription() + ", Spoiler";
-		
-	}
-	
-	public double getCost(){
-		
-		System.out.println("Cost of Spoiler: " + .50);
-		
-		return tempToyCar.getCost() + .50;
-		
+		// Add them to base
+		init();
+
 	}
 
 }
